@@ -1,0 +1,14 @@
+nav {
+    background-color: rgb(248, 193, 204);
+}
+.container{
+    color:rgb(38, 155, 132);
+    --bs-navbar-color: rgb(38, 155, 132);
+}
+.navbar-brand{
+    font-size: xx-large;
+    color: rgb(215, 38, 74);
+    border-style: solid;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
