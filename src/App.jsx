@@ -5,8 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
-import Titulo from './components/Titulo/Titulo';
-
 
 
 function App() {
@@ -17,8 +15,6 @@ function App() {
       <NavBar />
         
       <ItemListContainer greeting='Proxima parada...'/>
-      
-      <Titulo />
       
     </>
   ) 

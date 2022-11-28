@@ -18,22 +18,21 @@ const NavBar = () =>  {
                         <Nav.Link href="#link">Nosotros</Nav.Link>
                         <NavDropdown title="Tienda" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">
-                                Productos
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
                                 Box Temáticas
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
+                            <NavDropdown.Item href="#action/3.2">
                                 Box Happy
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                Accesorios Festejos
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">
-                                Carrito
+                                Sale
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#link">Info</Nav.Link>
                         <Nav.Link href="#link">Contacto</Nav.Link>
-                        
                     </Nav>
                 </Navbar.Collapse>                    
             </Container>
@@ -43,12 +42,12 @@ const NavBar = () =>  {
 
 export default NavBar;
 
-<Navbar.Brand href="#home">
-<img
-  src="/logo.svg"
-  width="30"
-  height="30"
-  className="d-inline-block align-top"
-  alt="React Bootstrap logo"
-/>
-</Navbar.Brand>
+//<Navbar.Brand href="#home">
+//<img
+//  src="/logo.svg"
+//  width="30"
+//  height="30"
+//  className="d-inline-block align-top"
+//  alt="React Bootstrap logo"
+///>
+//</Navbar.Brand>
