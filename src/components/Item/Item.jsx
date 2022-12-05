@@ -2,16 +2,30 @@ import React, { useEffect, useState } from 'react'
 import { gFetch } from '../../helpers/gFetch'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link, useParams } from 'react-router-dom';
 
 const Item = () => {
     const [products, loadProduct] = useState([])
     const [loading, setLoading] = useState(true)
+
+    const { id } = useParams()
+    console.log(id)
+
     useEffect(()=>{
-    gFetch()
-    .then(info => loadProduct(info))
-    .catch(falla => console.log(falla))
-    .finally(() => setLoading(false))
-    }, [])
+    if (id){
+        gFetch()
+        .then(info => loadProduct(info.filter(prod => prod.category === id)))
+        .catch(falla => console.log(falla))
+        .finally(() => setLoading(false))
+
+    } else {
+        gFetch()
+        .then(info => loadProduct(info))
+        .catch(falla => console.log(falla))
+        .finally(() => setLoading(false))
+
+    }
+    }, [id])
 
     return (
         loading 
@@ -20,7 +34,7 @@ const Item = () => {
         :
         products.map(product => 
             <Card style={{ width: '18rem' }} key={product.id}>
-            <Card.Img variant="top" src={product.picture} />
+            <Card.Img variant="top" src={product.foto} />
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>
@@ -29,7 +43,9 @@ const Item = () => {
                     <Card.Text>
                         $ {product.price}
                     </Card.Text>
-                    <Button variant="primary">AGREGAR AL CARRITO</Button>
+                    <Link to={`/detail/${product.id}`}>
+                        <Button variant="primary">DETALLE</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         )
