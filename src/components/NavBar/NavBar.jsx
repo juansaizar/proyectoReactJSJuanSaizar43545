@@ -17,25 +17,33 @@ const NavBar = () =>  {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Nosotros</Nav.Link>
+                        <Nav.Link>
+                            <Link to= '/'>Home</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to= '/'>Nosotros</Link>
+                        </Nav.Link>
                         <NavDropdown title="Tienda" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
+                            <NavDropdown.Item /*href="#action/3.1"*/>
                                 <NavLink to="/category/Box Temática">Box Temáticas</NavLink> 
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
+                            <NavDropdown.Item /*href="#action/3.2"*/>
                                 <NavLink to="/category/Box Happy">Box Happy</NavLink> 
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
+                            <NavDropdown.Item /*href="#action/3.3"*/>
                                 <NavLink to="/category/Accesorios Festejo">Accesorios Festejos</NavLink>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item /*href="#action/3.4"*/>
                                 Sale
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#link">Info</Nav.Link>
-                        <Nav.Link href="#link">Contacto</Nav.Link>
+                        <Nav.Link>
+                            <Link to= '/'>Info</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to= '/'>Contacto</Link>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>                    
             </Container>
